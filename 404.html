@@ -6,6 +6,8 @@
 <html lang="en">
     <!--<![endif]-->
     <head>
+        <meta name="text:Search Label" content="" />
+        <script type="text/javascript" src="http://static.tumblr.com/p2evvtm/Wycm17d1m/tumblr_search_box.js"></script>
         <!-- Title -->
         <title>RTS Treinamentos</title>
         <!-- Meta -->
@@ -28,6 +30,18 @@
         <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
     </head>
     <body>
+        <script>
+           (function() {
+               var cx = '006572601930386139888:kjkjwimgtts';
+               var gcse = document.createElement('script');
+               gcse.type = 'text/javascript';
+               gcse.async = true;
+               gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+                   '//cse.google.com/cse.js?cx=' + cx;
+               var s = document.getElementsByTagName('script')[0];
+               s.parentNode.insertBefore(gcse, s);
+           })();
+        </script>
         <div id="body_bg">
             <div class="primary-container-group">
                 <!-- Background -->
@@ -81,11 +95,9 @@
                                         <h2>404!</h2>
                                         <h3>Página não encontrada</h3>
                                         <p>O link que você seguiu pode estar quebrado ou a página pode ter sido removida.</p>
-                                        <form class="form-search search-404">
-                                            <div class="input-append">
-                                                <input type="text" class="span2 search-query">
-                                                <button type="submit" class="btn btn-blue">Search</button>
-                                            </div>
+                                        <form onsubmit="return tagSearch(this)">
+                                            <input type="text" name="tag" value="Search Our Blog" onfocus="if (this.value == '{text:Search Label}') {this.value=''}" onblur="if (this.value == '') {this.value='{text:Search Label}'}" />
+                                            <input type="submit" value="Search" />
                                         </form>
                                     </div>
                                 </div>
