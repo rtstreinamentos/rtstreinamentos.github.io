@@ -83,11 +83,22 @@
                                         <p>O link que você seguiu pode estar quebrado ou a página pode ter sido removida.</p>
                                         <form class="form-search search-404">
                                             <div class="input-append">
-                                                <input type="text" class="span2 search-query">
-                                                <button type="submit" class="btn btn-blue">Search</button>
+                                                <form style="margin:0px; margin-top:4px;" action="http://search.freefind.com/find.html" method="get" accept-charset="utf-8" target="_self">
+		                                            <input type="hidden" name="si" value="65652912">
+		                                            <input type="hidden" name="pid" value="r">
+		                                            <input type="hidden" name="n" value="0">
+		                                            <input type="hidden" name="_charset_" value="">
+		                                            <input type="hidden" name="bcd" value="&#247;">
+		                                            <input type="text" class="span2 search-query" name="query" size="15">
+		                                            <button type="submit" class="btn btn-blue">Search</button>
+		                                        </form>
                                             </div>
                                         </form>
                                     </div>
+
+
+
+
                                 </div>
                             </div>
                         </div>
