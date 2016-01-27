@@ -7,7 +7,7 @@
     <!--<![endif]-->
     <head>
         <!-- Title -->
-        <title>RTS Treinamentos em TI | Teste de Software Automatizado - Relato de Experiência</title>
+        <title>RTS Treinamentos em TI | Como importar um projeto armazenado no GitHub</title>
         <!-- Meta -->
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="description" content="">
@@ -87,36 +87,43 @@
                             <div class="row margin-vert-30">
                                 <div class="col-md-9">
                                     <!-- Main Content -->
-                                    <h2>Teste de Software Automatizado Relato Experiência</h2><br><br>
+                                    <h2>Como importar um projeto armazenado no GitHub</h2><br><br>
                                     <a class="soboo soboo-simple" data-hover="counter" data-model="square" data-orientation="horizontal" data-services="twitter facebook linkedin googleplus" data-userid="23301" href="http://www.seomaster.com.br/bookmark.html" id="vertical"></a><br>
 
-                                    <p>Abaixo um relato de experiência do <b>Raphael Carvalho</b> de práticas e ferramentas envolvendo automação de teste de software. Raphael é desenvolvedor e participou em maio do <b>Treinamento de Teste Funcional Automatizado na RTS Treinamentos em TI</b>.
-                                        Vamos acompanhar uma entrevista que nós realizamos com o Raphael.</p><br><br>
-                                    <p><b>Poderia falar brevemente do projeto?</b><br>
-                                        <b>Raphael:</b> É uma plataforam de cloud hosting, que utiliza a api do cloudstack, python, django, nginx, gunicorn, html5 e bootstrap. Como framework de de gestão estamos utilizando Kanban.</p>
-
-                                    <p><b>Do conteúdo visto no treinamento quais contribuíram para a realidade do seu projeto e como você aplicou?</b><br>
-                                        <b>Raphael:</b> Os conteúdos do treinamento me ajudaram muito não só para o projeto citado, abriram minha mente com relação à automação de testes, principalmente se tratando de organização, estrutura e
-                                        manutenção do código da suite de testes, o design pattern page objects que aprendi com vocês ainda vai nos ajudar e muito.</p>
-                                    <p><b>Qual é o perfil das pessoas que estão trabalhando com automatização?</b><br>
-                                        <b>Raphael:</b> Gostamos muito de contar com ferramentas que possam tornar o nosso trabalho mais simples, menos
-                                        chato e repetitivo, mas ao mesmo tempo não deixamos de lado os testes manuais, um teste exploratório no final de tudo ainda é muito importante.</p>
-                                    <p><b>Quais as ferramentas vocês estão usando?</b><br>
-                                        <b>Raphael:</b> Como ferramenta para testes funcionais, estamos utilizando selenium Web driver, para unit tests, utilizamos mock, factoryboy, freezetime e outras libs.</p>
-                                    <p><b>Precisou realizar algum treinamento interno para equipe?</b><br>
-                                        <b>Raphael:</b> Nós estavamos estudando por conta própria e eu fiz o treinamento com vocês para aprender coisas novas como jenkins e pageobjects. Uns amigos de outra equipe se interessaram no meu relato sobre o curso e se inscreveram na turma de agosto para o curso de <b>teste funcional automatizado da RTS Treinamentos em TI.</b></p>
-                                    <p><b>Poderia falar um pouco dos benefícios que os testes automatizados trouxe para seu projeto?</b><br>
-                                        <b>Raphael:</b> Um dos principais benefícios e a redução do time to market, pois através da suite de testes conseguimos feedback de forma mais rápida e menos custosa, sabendo se mudanças realizadas na aplicação por exemplo fizeram alguma feature já existente parar de funcionar.
-                                        Como resultado passamos a desenvolvedor de forma mais segura, inclusível  permitindo que a aplicação fosse mais flexível a mudanças.</p>
-                                    <p><b>Poderia nos falar quais são os próximos passos que você está planejando?</b><br>
-                                        <b>Raphael:</b> O próximos passos são refatorar os nossos código de testes utilizando page objects, implantarmos continuos delivery e o mais importante envolver o resto da empresa, para isso vamos palestrar sobre automação de testes funcionais e em seguida sobre continuous delivery.
-                                        Chamei mais 4 amigos para me ajudar a fazer as apresentações, com isso vamos aprender mais juntos e formaremos um grupo para incentivar positivamente o resto da empresa. Seguem o link das nossas apresentações:
+                                    <h4>O que é o GitHub</h4>
+                                    <p><a target="_blank" href="https://pt.wikipedia.org/wiki/Github">GitHub</a> é um serviço de compartilhamento de projetos que utilizam o <a target="_blank" href="https://pt.wikipedia.org/wiki/Git">Git</a> como controle de versão. Nele é possível armazenar o código fonte do seu projeto e torná-lo disponível a todos.  Os projetos criados no nosso treinamento (aula e exercícios) ficarão disponível na conta da <a target="_blank" href="https://github.com/rtstreinamentos">RTS Treinamentos</a> para download. Abaixo veremos como fazer o import do projeto no Eclipse</p>
+                                    <h4>Como importar um projeto</h4>
+                                    <p>Primeiramenta no Eclipse “<b>File</b>” > “<b>Import…</b>” para abrir o wizard de importação</p>
+                                    <center><img src="../assets/img/github/github1.png"></center><br>
+                                    <p>Já no wizard, devemos fazer uma pesquisa por “<b>Git</b>” no campo “<b>Select an import source</b>” (1) e depois escolher a opção “<b>Projects from Git</b>” (2). </p>
+                                    <center><img src="../assets/img/github/github2.png"></center><br>
+                                    <p>Já no próximo passo devemos escolher a opção “<b>Clone URI</b>”</p>
+                                    <center><img src="../assets/img/github/github3.png"></center><br>
+                                    <p>Agora devemos informar os dados do repositório, conforme abaixo:
                                         <ul>
-                                            <li><a target="_blank" href="http://slides.com/raphaelcarvalho/test-automation">Test Automation</a></li>
-                                            <li><a target="_blank" href="https://slides.com/raphaelcarvalho/continuous-delivery">Continuous Delivery</a></li>
-                                        </ul></p>
-                                    <p>Contato Linkedin: <a target="_blank" href= "http://br.linkedin.com/in/raphaelwct/">http://br.linkedin.com/in/raphaelwct/</a></p>
-
+                                            <li><b>URI:</b> < url do repositório ></li>
+                                            <li><b>Host:</b> < host do repositório > Esse campo é autopreenchido</li>
+                                            <li><b>Repository Path:</b> < path do repositório > Esse campo também é autopreenchido</li>
+                                            <li><b>Protocol:</b> < protocolo do uri > É o protocolo da uri (http, ssh, git, …). Esse também é autopreenchido</li>
+                                            <li><b>User:</b> < seu usuário do github ></li>
+                                            <li><b>Password:</b> < sua senha do github ></li>
+                                        </ul>
+                                    </p>
+                                    <p>
+                                        Para esse exemplo utilizaremos a URI do projeto de exercícios do JUnit que passamos após o primeiro dia do treinamento.<br><br>
+                                        <center><a href="https://github.com/rtstreinamento/exercicio-junit.git">https://github.com/rtstreinamento/exercicio-junit.git</a></center><br><br>
+                                        OBS.: Também é necessário possuir uma conta no GitHub. Para criá-la <a target="_blank" href="https://github.com/">acesse esse link!</a>
+                                    </p>
+                                    <center><img src="../assets/img/github/github4.png"></center><br>
+                                    <p>Nesse próximo passo escolhe o “<b>Branch</b>” ou “<b>Tag</b>” que iremos importar. Nesse caso desse exemplo só existe o “<b>Master</b>” que é a linha de desenvolvimento principal.</p>
+                                    <center><img src="../assets/img/github/github5.png"></center><br>
+                                    <p>
+                                        Após a escolha do “<b>Branch</b>” devemos informar onde será o repositório local do código. No campo “<b>Directory</b>” devemos completar com o nome da pasta onde será o repositório. Nesse caso utilizamos “<b>rtstreinamento-exercicio-junit</b>”
+                                        <br><br><b>OBS.:</b> Nesse passo o Eclipse já exibe o caminho pré configurado para a pasta dos repositórios.
+                                    </p>
+                                    <center><img src="../assets/img/github/github6.png"></center><br>
+                                    <p>Nos dois últimos passos não é necessário alterar as opções marcadas. Então “<b>Next</b>”, “<b>Next</b>”  e “<b>Finish</b>”. Após isso o projeto estará disponível no “<b>Project Explorer</b>”</p>
+                                    <center><img src="../assets/img/github/github7.png"></center><br>
                                     <!-- End Main Content -->
                                 </div>
                                  <!-- Side Column -->
@@ -130,7 +137,17 @@
                                             <ul class="posts-list margin-top-10">
                                                 <li>
                                                     <div class="recent-post">
-                                                        <a href="tabela-periodica-de-ferramentas-de-devops.html" class="posts-list-title">Tabela Periódica de Ferramentas de DevOps</a>
+                                                        <a href="teste-de-software-automatizado-relato-experiencia.html" class="posts-list-title">Teste de Software Automatizado - Relato de Experiência</a>
+                                                        <br>
+                                                        <span class="recent-post-date">
+                                                            26 de janeiro, 2016
+                                                        </span>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </li>
+                                                <li>
+                                                    <div class="recent-post">
+                                                       <a href="tabela-periodica-de-ferramentas-de-devops.html" class="posts-list-title">Tabela Periódica de Ferramentas de DevOps</a>
                                                         <br>
                                                         <span class="recent-post-date">
                                                             27 de janeiro, 2016
@@ -140,20 +157,10 @@
                                                 </li>
                                                 <li>
                                                     <div class="recent-post">
-                                                         <a href="primeiro-projeto-no-jenkins.html" class="posts-list-title">Instalando o Jenkins e configurando meu primeiro projeto de testes</a>
+                                                        <a href="primeiro-projeto-no-jenkins.html" class="posts-list-title">Instalando o Jenkins e configurando meu primeiro projeto de testes</a>
                                                         <br>
                                                         <span class="recent-post-date">
                                                             27 de janeiro, 2016
-                                                        </span>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </li>
-                                                <li>
-                                                    <div class="recent-post">
-                                                        <a href="como-importar-um-projeto-armazenado-no-github.html" class="posts-list-title">Como importar um projeto armazenado no GitHub</a>
-                                                        <br>
-                                                        <span class="recent-post-date">
-                                                            28 de janeiro, 2016
                                                         </span>
                                                     </div>
                                                     <div class="clearfix"></div>
@@ -294,7 +301,7 @@
                                             <img src="../assets/img/thumbsgallery/thumbs/image03.jpg" alt="image3.jpg" width="60" height="60">
                                             <i></i></a><a class="thumbBox" rel="lightbox-thumbs" href="../assets/img/thumbsgallery/image04.jpg" width="400" height="400">
                                                 <img src="../assets/img/thumbsgallery/thumbs/image04.jpg" alt="image4.jpg" width="60" height="60">
-                                                <i></i></a><a class="thumbBox" rel="lightbox-thumbs" href="../assets/img/thumbsgallery/image05.jpg" width="400" height="400">
+                                                <i></i></a><a class="thumbBox" rel="lightbox-thumbs" href="../assets/img/thumbsgallery/image04.jpg" width="400" height="400">
                                                     <img src="../assets/img/thumbsgallery/thumbs/image05.jpg" alt="image5.jpg" width="60" height="60">
                                                     <i></i></a><a class="thumbBox" rel="lightbox-thumbs" href="../assets/img/thumbsgallery/image06.jpg" width="400" height="400">
                                                         <img src="../assets/img/thumbsgallery/thumbs/image06.jpg" alt="image6.jpg" width="60" height="60">

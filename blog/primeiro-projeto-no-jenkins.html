@@ -90,13 +90,13 @@
                                     <h2>Instalando o Jenkins e configurando meu primeiro projeto de testes</h2><br><br>
                                     <a class="soboo soboo-simple" data-hover="counter" data-model="square" data-orientation="horizontal" data-services="twitter facebook linkedin googleplus" data-userid="23301" href="http://www.seomaster.com.br/bookmark.html" id="vertical"></a><br>
 
-                                     <p>O <a href="http://jenkins-ci.org/">Jenkins</a> é uma ferramenta de Integração Contínua free. Nesse post vamos aprender a instalar como um serviço do Windows e configurar nosso primeiro projeto de teste utilizando Maven.<br><br>
-                                        No <a href="http://jenkins-ci.org/">site do Jenkins</a> existem diversas versões disponíveis para Windows, Linux e OS X. Vamos baixar a versão para windows:</p>
+                                     <p>O <a target="_blank"href="http://jenkins-ci.org/">Jenkins</a> é uma ferramenta de Integração Contínua free. Nesse post vamos aprender a instalar como um serviço do Windows e configurar nosso primeiro projeto de teste utilizando Maven.<br><br>
+                                        No <a target="_blank" href="http://jenkins-ci.org/">site do Jenkins</a> existem diversas versões disponíveis para Windows, Linux e OS X. Vamos baixar a versão para windows:</p>
                                        <center><img src="../assets/img/jenkins/jenkins1.jpg"></center><br>
                                     <p>Feito isso, basta descompactar o .zip baixado e executar o arquivo setup.exe.  Vai aparecer o ajudante de instalação e basta ir dando Next até a última tela e então, Finish.<br><br>
                                         Quando a instalação estiver completa, você pode ver o Jenkins na sua lista de Serviços (executar services.msc):</p>
                                     <center><img src="../assets/img/jenkins/jenkins2.png"></center><br>
-                                    <p>Ao acessar <a href="http://localhost:8080/">http://localhost:8080/</a>você verá a tela inicial do Jenkins:</p>
+                                    <p>Ao acessar <a target="_blank" href="http://localhost:8080/">http://localhost:8080/</a>você verá a tela inicial do Jenkins:</p>
                                     <center><img src="../assets/img/jenkins/jenkins3.jpg"></center><br>
                                     <p>Primeiro, vamos fazer as configurações necessárias para executar nosso projeto de testes.<br><br>
                                         Acesse Gerenciar Jenkins > Gerenciar Plugins > na aba Disponíveis, pesquise por GitHub Plugin e Cucumber Test Result Plugin.
@@ -107,7 +107,7 @@
                                         </ul>
                                     </p>
                                     <center><img src="../assets/img/jenkins/jenkins4.png"></center><br>
-                                    <p>Como nosso projeto é um Projeto Maven, precisamos configurar o Jenkins para usar o <a href="http://maven.apache.org/"> Apache Maven</a>. Para isso basta acessar a página de <a href="http://maven.apache.org/download.cgi">downloads</a> e baixar o arquivo zip da versão mais recente. Depois é só descompactar a pasta no diretório de sua preferência.<br><br>
+                                    <p>Como nosso projeto é um Projeto Maven, precisamos configurar o Jenkins para usar o <a target="_blank" href="http://maven.apache.org/"> Apache Maven</a>. Para isso basta acessar a página de <a target="_blank" href="http://maven.apache.org/download.cgi">downloads</a> e baixar o arquivo zip da versão mais recente. Depois é só descompactar a pasta no diretório de sua preferência.<br><br>
                                         Voltando ao Jenkins, vamos acessar novamente o menu Gerenciar Jenkins > Configurar o Sistema.
                                     </p>
                                     <center><img src="../assets/img/jenkins/jenkins5.jpg"></center><br>
@@ -119,7 +119,7 @@
                                     </p>
                                     <center><img src="../assets/img/jenkins/jenkins6.jpg"></center><br>
                                     <p>
-                                        Assim nossas configurações globais para o Jenkins estão terminadas, vamos voltar para a <a href="http://localhost:8080/">home</a> e criar nosso primeiro job.<br><br>
+                                        Assim nossas configurações globais para o Jenkins estão terminadas, vamos voltar para a <a target="_blank" href="http://localhost:8080/">home</a> e criar nosso primeiro job.<br><br>
                                         Ao clicar em “Novo job”, vemos a tela abaixo e faremos as seguintes configurações:
                                         <ul>
                                             <li>Nome do job</li>
@@ -130,7 +130,7 @@
                                     <p>
                                         Na próxima tela vamos configurar as opções do nosso projeto:
                                         <ul>
-                                            <li><b>GIT:</b> com o endereço do repositório onde estão os seus testes, nesse caso estamos usando <a href="https://github.com/rtstreinamento/treinamento-cucumber.git">https://github.com/rtstreinamento/treinamento-cucumber.git</a></li>
+                                            <li><b>GIT:</b> com o endereço do repositório onde estão os seus testes, nesse caso estamos usando <a target="_blank" href="https://github.com/rtstreinamento/treinamento-cucumber.git">https://github.com/rtstreinamento/treinamento-cucumber.git</a></li>
                                             <li><b>Construir Metas e Opções:</b> clean test e</li>
                                             <li><b>Ações pós-builds:</b> target/cucumber/cucumber.json</li>
                                         </ul>
@@ -176,26 +176,10 @@
                                                 </li>
                                                 <li>
                                                     <div class="recent-post">
-                                                        <a href="">
-                                                            <img class="pull-left" src="../assets/img/blog/thumbs/thumb3.jpg" alt="thumb3">
-                                                        </a>
-                                                        <a href="#" class="posts-list-title">Sidebar post example</a>
+                                                       <a href="como-importar-um-projeto-armazenado-no-github.html" class="posts-list-title">Como importar um projeto armazenado no GitHub</a>
                                                         <br>
                                                         <span class="recent-post-date">
-                                                            July 30, 2013
-                                                        </span>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </li>
-                                                <li>
-                                                    <div class="recent-post">
-                                                        <a href="">
-                                                            <img class="pull-left" src="../assets/img/blog/thumbs/thumb4.jpg" alt="thumb4">
-                                                        </a>
-                                                        <a href="#" class="posts-list-title">Sidebar post example</a>
-                                                        <br>
-                                                        <span class="recent-post-date">
-                                                            July 30, 2013
+                                                            28 de janeiro, 2016
                                                         </span>
                                                     </div>
                                                     <div class="clearfix"></div>
