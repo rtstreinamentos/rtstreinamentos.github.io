@@ -7,7 +7,7 @@
     <!--<![endif]-->
     <head>
         <!-- Title -->
-        <title>RTS Treinamentos em TI | Tabela Periódica de Ferramentas de DevOps</title>
+        <title>RTS Treinamentos em TI | Instalando o Jenkins e configurando meu primeiro projeto de testes</title>
         <!-- Meta -->
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="description" content="">
@@ -87,30 +87,61 @@
                             <div class="row margin-vert-30">
                                 <div class="col-md-9">
                                     <!-- Main Content -->
-                                    <h2>Tabela Periódica de Ferramentas de DevOps</h2><br><br>
+                                    <h2>Instalando o Jenkins e configurando meu primeiro projeto de testes</h2><br><br>
                                     <a class="soboo soboo-simple" data-hover="counter" data-model="square" data-orientation="horizontal" data-services="twitter facebook linkedin googleplus" data-userid="23301" href="http://www.seomaster.com.br/bookmark.html" id="vertical"></a><br>
 
-                                    <p>Tabela muito interessante com várias ferramentas separadas por tipo:<br><br>
+                                     <p>O <a href="http://jenkins-ci.org/">Jenkins</a> é uma ferramenta de Integração Contínua free. Nesse post vamos aprender a instalar como um serviço do Windows e configurar nosso primeiro projeto de teste utilizando Maven.<br><br>
+                                        No <a href="http://jenkins-ci.org/">site do Jenkins</a> existem diversas versões disponíveis para Windows, Linux e OS X. Vamos baixar a versão para windows:</p>
+                                       <center><img src="../assets/img/jenkins/jenkins1.jpg"></center><br>
+                                    <p>Feito isso, basta descompactar o .zip baixado e executar o arquivo setup.exe.  Vai aparecer o ajudante de instalação e basta ir dando Next até a última tela e então, Finish.<br><br>
+                                        Quando a instalação estiver completa, você pode ver o Jenkins na sua lista de Serviços (executar services.msc):</p>
+                                    <center><img src="../assets/img/jenkins/jenkins2.png"></center><br>
+                                    <p>Ao acessar <a href="http://localhost:8080/">http://localhost:8080/</a>você verá a tela inicial do Jenkins:</p>
+                                    <center><img src="../assets/img/jenkins/jenkins3.jpg"></center><br>
+                                    <p>Primeiro, vamos fazer as configurações necessárias para executar nosso projeto de testes.<br><br>
+                                        Acesse Gerenciar Jenkins > Gerenciar Plugins > na aba Disponíveis, pesquise por GitHub Plugin e Cucumber Test Result Plugin.
                                         <ul>
-                                            <li>Banco de Dados</li>
-                                            <li>Integração Contínua</li>
-                                            <li>Deploy</li>
-                                            <li>Nuvem/IAAS/PAAS</li>
-                                            <li>BI/Monitoramento</li>
-                                            <li>Controle de Versão</li>
-                                            <li>Gerenciamento de Repositórios</li>
-                                            <li>Configuração/Provisionamento</li>
-                                            <li>Gerenciamento de Release</li>
-                                            <li>Logs</li>
-                                            <li>Build</li>
-                                            <li>Teste</li>
-                                            <li>Containerização</li>
-                                            <li>Colaboração</li>
-                                            <li>Segurança</li>
-                                        </ul><br>
-                                    É uma ótima dica para saber quais as ferramentas que estão sendo utilizadas e o que vale a pena estudar.</p><br><br>
+                                            <li>O GitHub Plugin será necessário para que o Jenkins consiga buscar nosso código no repositório.</li>
+                                            <li>O Cucumber Test Result Plugin será necessário para exibir o gráfico com o resultado da execução dos nosso testes com Cucumber.</li>
 
-                                    <iframe src="https://xebialabs.com/periodic-table-of-devops-tools/embed/" style="border:0px #FFFFFF none;" name="Periodic Table of DevOps" scrolling="no" frameborder="1" marginheight="0px" marginwidth="0px" height="620px" width="1000px"></iframe>
+                                        </ul>
+                                    </p>
+                                    <center><img src="../assets/img/jenkins/jenkins4.png"></center><br>
+                                    <p>Como nosso projeto é um Projeto Maven, precisamos configurar o Jenkins para usar o <a href="http://maven.apache.org/"> Apache Maven</a>. Para isso basta acessar a página de <a href="http://maven.apache.org/download.cgi">downloads</a> e baixar o arquivo zip da versão mais recente. Depois é só descompactar a pasta no diretório de sua preferência.<br><br>
+                                        Voltando ao Jenkins, vamos acessar novamente o menu Gerenciar Jenkins > Configurar o Sistema.
+                                    </p>
+                                    <center><img src="../assets/img/jenkins/jenkins5.jpg"></center><br>
+                                    <p>E configurar os seguintes campos:
+                                        <ul>
+                                            <li>JDK</li>
+                                            <li>Maven</li>
+                                        </ul>
+                                    </p>
+                                    <center><img src="../assets/img/jenkins/jenkins6.jpg"></center><br>
+                                    <p>
+                                        Assim nossas configurações globais para o Jenkins estão terminadas, vamos voltar para a <a href="http://localhost:8080/">home</a> e criar nosso primeiro job.<br><br>
+                                        Ao clicar em “Novo job”, vemos a tela abaixo e faremos as seguintes configurações:
+                                        <ul>
+                                            <li>Nome do job</li>
+                                            <li>Selecionar a opção “Construir um projeto maven2/3”, já que nosso projeto é Maven</li>
+                                        </ul>
+                                    </p>
+                                    <center><img src="../assets/img/jenkins/jenkins7.png"></center><br>
+                                    <p>
+                                        Na próxima tela vamos configurar as opções do nosso projeto:
+                                        <ul>
+                                            <li><b>GIT:</b> com o endereço do repositório onde estão os seus testes, nesse caso estamos usando <a href="https://github.com/rtstreinamento/treinamento-cucumber.git">https://github.com/rtstreinamento/treinamento-cucumber.git</a></li>
+                                            <li><b>Construir Metas e Opções:</b> clean test e</li>
+                                            <li><b>Ações pós-builds:</b> target/cucumber/cucumber.json</li>
+                                        </ul>
+                                    </p>
+                                    <center><img src="../assets/img/jenkins/jenkins8.jpg"></center><br>
+                                    <p>E então <b>Salvar!</b><br><br>
+                                        Depois é só <b>Construir</b> e esperar para ver o gráfico com o Resultado dos seus testes.
+                                    </p>
+                                    <center><img src="../assets/img/jenkins/jenkins9.png"></center><br>
+                                    <center><img src="../assets/img/jenkins/jenkins10.png"></center><br>
+
 
                                     <!-- End Main Content -->
                                 </div>
@@ -135,7 +166,7 @@
                                                 </li>
                                                 <li>
                                                     <div class="recent-post">
-                                                        <a href="primeiro-projeto-no-jenkins.html" class="posts-list-title">Instalando o Jenkins e configurando meu primeiro projeto de testes</a>
+                                                       <a href="tabela-periodica-de-ferramentas-de-devops.html" class="posts-list-title">Tabela Periódica de Ferramentas de DevOps</a>
                                                         <br>
                                                         <span class="recent-post-date">
                                                             27 de janeiro, 2016
