@@ -1484,9 +1484,8 @@ a.slicknav_item [class*=" fa-"] {
   width: 33.33%;
 }
 
-.portfolio-group .col-sm-3 {
+.portfolio-group .col-sm-4 {
   width: 30%;
-  position: relative;
 }
 ul.portfolio li a,
 ul.grid li:first-child a {
